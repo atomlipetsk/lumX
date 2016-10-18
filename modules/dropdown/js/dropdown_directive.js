@@ -205,7 +205,10 @@
 
             dropdownMenu
                 .addClass('dropdown-menu--is-open')
-                .css('z-index', LxDepthService.getDepth())
+                .css({
+                    'z-index': LxDepthService.getDepth(),
+                    display: 'none'
+                })
                 .appendTo('body');
 
             if (lxDropdown.escapeClose)
@@ -301,6 +304,10 @@
                         queue: false
                     });
                 }
+
+                dropdownMenu.css({
+                    display: 'block'
+                });
             });
         }
 
