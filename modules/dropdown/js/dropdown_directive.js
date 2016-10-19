@@ -179,7 +179,10 @@
                     dropdownMenu
                         .removeAttr('style')
                         .removeClass('dropdown-menu--is-open')
-                        .appendTo($element.find('.dropdown'));
+                        .appendTo($element.find('.dropdown'))
+                        .css({
+                            display: 'none'
+                        });
 
                     $scope.$apply(function()
                     {
